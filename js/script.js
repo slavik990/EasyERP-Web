@@ -25,6 +25,7 @@
 		 }
 		 next.addClass("active").css({right:1000,opacity:0}).animate({right:"20",opacity:1},time);
 		 next = $(".gallery .active").prev();
+		 console.log(next);
 		 if (next.length==0){
 			 $(".prev").removeClass("active");
 		 }
