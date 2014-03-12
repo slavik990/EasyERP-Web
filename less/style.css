@@ -76,6 +76,14 @@ header {
   z-index: 1000;
   width: 100%;
 }
+header.dark {
+  height: 90px;
+  background-color: rgba(38, 38, 38, 0.95);
+  border-bottom: 1px solid #E8E8E8;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
 header .inner {
 	.inner;
 }
@@ -110,6 +118,18 @@ header .inner nav.main-menu ul li a {
   -o-transition: #999999 0.25s;
   transition: #999999 0.25s;
 }
+header .inner nav.main-menu ul li a.tryit {
+	padding:10px 20px;
+	color:white;
+	border-radius:5px;
+	line-height:90px;
+	text-align:center;
+	background-color: #33ABE7;
+}
+header .inner nav.main-menu ul li a.tryit:hover {
+	color:white;
+	background-color: #119cE2;
+}
 header .inner nav.main-menu ul li a:hover {
   color: #1BBF9C;
 }
@@ -117,16 +137,18 @@ header .inner nav.main-menu ul li a:hover {
   min-height: 850px;
   position: relative;
   padding-top: 100px;
+  overflow:hidden;
 }
 #content .inner {
 	.inner;
 }
 #content .info {
-	margin-top:140px;
+  margin-top:140px;
   float: left;
   width: 500px;
   position:relative;
   z-index:500;
+  text-shadow: 0px 0px 11px white;
 }
 #content .info h3 {
   font-size: 2.625em;
@@ -296,7 +318,7 @@ header .inner nav.main-menu ul li a:hover {
   -o-transition: all 0.25s;
   transition: all 0.25s;
   color:black;
-  display:block;
+  display:none;
   text-decoration:none;
 }
 #content .prev.active,
@@ -319,7 +341,7 @@ header .inner nav.main-menu ul li a:hover {
 	text-align:center;
 	width:100%;
 	position:absolute;
-	bottom:0px;
+	bottom:10px;
 	
 }
 #content .navigation .inner{
