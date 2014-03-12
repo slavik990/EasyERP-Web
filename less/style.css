@@ -41,7 +41,7 @@ header .inner h2 {
   margin: 0;
   line-height: 90px;
   float: left;
-  color: #989898;
+  color: #666;
 }
 header .inner nav.main-menu {
   float: right;
@@ -67,6 +67,28 @@ header .inner nav.main-menu ul li a {
   -ms-transition: #999999 0.25s;
   -o-transition: #999999 0.25s;
   transition: #999999 0.25s;
+}
+header .inner nav.main-menu ul li a .arrow{
+	position:relative;
+	padding-right:20px;
+}
+header .inner nav.main-menu ul li a .arrow:before {
+	position:absolute;
+	right:5px;
+	top:6px;
+    border: solid rgba(0, 0, 0, 0);
+    content: " ";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border-top-color: #999;
+    border-width: 5px;
+    z-index: 9;
+}
+header .inner nav.main-menu ul li a.active .arrow:before {
+    border-bottom-color: #33ABE7;
+    border-width: 5px;
+    border-top: none;
 }
 header .inner nav.main-menu ul li a.tryit {
 	padding:10px 20px;
@@ -168,14 +190,14 @@ header .inner nav.main-menu ul li .menu {
   text-shadow: 0px 0px 11px white;
 }
 #content .info h3 {
-  font-size: 2.625em;
+	font-size: 37px;
   line-height: 1.30952380952em;
   margin-bottom: 0.69047619047em;
   font-weight: 100;
   color: #282828;
 }
 #content .info span {
-  font-size: 1.14285714286em;
+	font-size: 16px;
   font-weight: 400;
   line-height: 1.8125em;
   color: #777777;
@@ -404,5 +426,7 @@ footer {
 }
 footer .inner {
 	.inner;
+	color: #777;
+	font-size: 14px;
 	line-height: 90px;
 }
