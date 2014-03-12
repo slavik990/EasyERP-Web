@@ -185,7 +185,7 @@ header .inner nav.main-menu ul li .menu {
   margin-top: 10px;
   background-color: #33abe7;
   color: #F9F9F9;
-  padding: 15px 20px;
+  padding: 15px 32px 15px 20px;
   border-radius: 5px;
   text-decoration: none;
   -webkit-transition: all 0.25s;
@@ -193,7 +193,38 @@ header .inner nav.main-menu ul li .menu {
   -ms-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
+  position:relative;
 }
+
+#content .info .button:before {
+    border: solid rgba(0, 0, 0, 0);
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: #33abe7;
+    border-width: 6px;
+    top: 19px;
+    right: 16px;
+    z-index: 9;
+}
+
+#content .info .button:after {
+    border: solid rgba(0, 0, 0, 0);
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: #F9F9F9;
+    border-width: 6px;
+    top: 19px;
+    right: 14px;
+}
+
+
+
 #content .info .button:hover {
   color: #33abe7;
   background-color: white;
