@@ -1,12 +1,18 @@
 @import url(font.css);
+html{
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
   min-width: 1200px;
-  min-height: 100%;
+  height: 100%;
 }
-
+.wrap{
+	min-height: 100%;
+	position:relative;
+}
 h5 {
     font-size: 0.8125em;
     margin-bottom: 0.5em;
@@ -41,8 +47,15 @@ header .inner h2 {
   margin: 0;
   line-height: 90px;
   float: left;
-  color: #666;
 }
+header .inner h2 a{
+  color: #666;
+  text-decoration:none;
+}
+header.dark .inner h2 a{
+  color: #b3b3b3;
+}
+
 header .inner nav.main-menu {
   float: right;
   font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
@@ -53,6 +66,7 @@ header .inner nav.main-menu ul {
   list-style: none;
 }
 header .inner nav.main-menu ul li {
+	position:relative;
   float: left;
   padding: 0 20px;
 }
@@ -67,6 +81,9 @@ header .inner nav.main-menu ul li a {
   -ms-transition: #999999 0.25s;
   -o-transition: #999999 0.25s;
   transition: #999999 0.25s;
+}
+header .inner nav.main-menu ul li a.active {
+  color: #33abe7;
 }
 header .inner nav.main-menu ul li a .arrow{
 	position:relative;
@@ -105,7 +122,18 @@ header .inner nav.main-menu ul li a.tryit:hover {
 header .inner nav.main-menu ul li a:hover {
   color: #33abe7;
 }
+header .inner nav.main-menu ul li a:hover .arrow:before{
+	border-top-color: #33ABE7;
+}
+header .inner nav.main-menu ul li a.not-active{
+	color: #ccc;
+	cursor:default;
+}
+header.dark .inner nav.main-menu ul li a.not-active{
+	color: #555;
+	cursor:default;
 
+}
 header .inner nav.main-menu ul li .menu h5 a {
     color: #282828;
     line-height:0!important;
@@ -119,11 +147,14 @@ header .inner nav.main-menu ul li .menu {
     background-color: #e8e8e8;
     background-color: rgba(232, 232, 232, 0.98);
 }
+header .inner nav.main-menu ul li .menu .panel li a{
+	min-width:200px;
+}
 .dropdown .menu {
     display:none;
     background: rgba(38, 38, 38, 0.95);
     position: absolute;
-    right: 14.286em;
+	left:0px;
     text-transform: none;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -173,10 +204,14 @@ header .inner nav.main-menu ul li .menu {
     float: left;
 }
 #content {
-  min-height: 850px;
   position: relative;
   padding-top: 100px;
   overflow:hidden;
+  padding-bottom:110px;
+
+}
+#content.main {
+  min-height: 850px;
 }
 #content .inner {
 	.inner;
@@ -411,7 +446,7 @@ header .inner nav.main-menu ul li .menu {
 	text-align:center;
 	width:100%;
 	position:absolute;
-	bottom:10px;
+	bottom:120px;
 	
 }
 #content .navigation .inner{
@@ -434,6 +469,59 @@ header .inner nav.main-menu ul li .menu {
 #content .navigation a.active{
 	background-color:#282828;
 }
+#content .contact-text{
+	margin-top:50px;
+	text-align:center;
+	font-weight: 100;
+	color: #282828;
+}
+#content .contact-text a{
+	color: #33ABE7;
+	text-decoration:none;
+	font-weight:300;
+}
+#content .contact-text a:hover{
+	text-decoration:underline;
+}
+
+#content .form{
+	font-weight: 100;
+	color: #282828;
+	width:30%;
+	margin:0 auto;
+}
+#content .form input,
+#content .form textarea{
+	width:100%;
+}
+#content .form textarea{
+	height:200px;
+}
+#content .form .button {
+	display:block;
+	width:101%;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+  border: 1px solid #33abe7;
+  margin-top: 10px;
+  background-color: #33abe7;
+  color: #F9F9F9;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  position:relative;
+  
+}
+#content .form .button:hover {
+  color: #33abe7;
+  background-color: white;
+}
 
 footer {
   width: 100%;
@@ -441,6 +529,8 @@ footer {
   height: 90px;
   background-color: rgba(249, 249, 249, 0.95);
   border-top: 1px solid #E8E8E8;
+  position:absolute;
+  bottom:0px;
 }
 footer .inner {
 	.inner;
