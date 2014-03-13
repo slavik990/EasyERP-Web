@@ -252,38 +252,20 @@ header .inner nav.main-menu ul li .menu .panel li a{
   transition: all 0.25s;
   position:relative;
 }
-
-#content .info .button:before {
-    border: solid rgba(0, 0, 0, 0);
-    content: " ";
-    height: 0;
-    width: 0;
+#content .info .button span {
     position: absolute;
-    pointer-events: none;
-    border-left-color: #33abe7;
-    border-width: 6px;
-    top: 19px;
-    right: 16px;
-    z-index: 9;
+    right: 17px;
+    top: 23px;
+    color: #F9F9F9;
+    font-size: 30px!important;
+    line-height: 0!important;
 }
 
-#content .info .button:after {
-    border: solid rgba(0, 0, 0, 0);
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-left-color: #F9F9F9;
-    border-width: 6px;
-    top: 19px;
-    right: 14px;
+#content .info .button:hover span{
+  color: #33abe7!important;
 }
-
-
-
 #content .info .button:hover {
-  color: #33abe7;
+  color: #33abe7!important;
   background-color: white;
 }
 #content .gallery {
